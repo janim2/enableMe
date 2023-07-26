@@ -5,11 +5,14 @@ class RoomsContainer extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final String? label;
   final bool? isSelected;
-  final action;
+  final onSelected;
 
   // ignore: sort_constructors_first
   const RoomsContainer(
-      {super.key, required this.label, this.isSelected = false, this.action});
+      {super.key,
+      required this.label,
+      this.isSelected = false,
+      this.onSelected});
 
   @override
   Widget build(BuildContext context) {

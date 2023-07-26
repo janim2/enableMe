@@ -116,7 +116,10 @@ class _DashBoardPageState extends State<DashBoardPage> {
               children: [
                 Column(
                   children: [
-                    const MyAppBar(appLabel: "Dashboard", icon: Icons.home_filled,),
+                    const MyAppBar(
+                      appLabel: "Dashboard",
+                      icon: Icons.home_filled,
+                    ),
                     Container(
                       margin:
                           const EdgeInsets.only(left: 17, right: 17, top: 5),
@@ -218,19 +221,31 @@ class _DashBoardPageState extends State<DashBoardPage> {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: const [
+                        children: [
                           RoomsContainer(
                             label: "All",
                           ),
-                          RoomsContainer(
-                            label: "Living Room",
-                            isSelected: true,
+                          InkWell(
+                            onTap: () {
+                              print("working");
+                              // context.push("/specific_room/${"Living Room"}");
+                            },
+                            child: RoomsContainer(
+                              label: "Living Room",
+                              isSelected: true,
+                            ),
                           ),
                           RoomsContainer(
                             label: "Kitchen",
+                            onSelected: () {
+                              // context.push("/specific_room/Kitchen");
+                            },
                           ),
                           RoomsContainer(
                             label: "Bathroom",
+                            onSelected: () {
+                              // context.push("/specific_room/${"BathRoom"}");
+                            },
                           ),
                         ],
                       ),
@@ -249,43 +264,43 @@ class _DashBoardPageState extends State<DashBoardPage> {
                         )
                       ],
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(left: 13, top: 17),
-                      decoration: BoxDecoration(
-                        // color: Color.fromARGB(255, 24, 20, 16),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(20.0),
-                        ),
-                        border: Border.all(color: TheColors.white),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12.0),
-                        child: Stack(children: [
-                          Image.asset(
-                            "assets/images/artwork3.png",
-                            fit: BoxFit.contain,
-                          ),
-                          Align(
-                            alignment: Alignment.bottomLeft,
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Text(
-                                "applianceLabel!",
-                                style: const TextStyle(
-                                  color: TheColors.brown,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          )
-                        ]),
-                      ),
-                    ),
-                    AppilanceContainer(
-                      applianceLabel: "Air Conditioning",
-                      bgImage: "assets/images/artwork3.png",
-                      width: 200,
-                    ),
+                    // Container(
+                    //   margin: const EdgeInsets.only(left: 13, top: 17),
+                    //   decoration: BoxDecoration(
+                    //     // color: Color.fromARGB(255, 24, 20, 16),
+                    //     borderRadius: const BorderRadius.all(
+                    //       Radius.circular(20.0),
+                    //     ),
+                    //     border: Border.all(color: TheColors.white),
+                    //   ),
+                    //   child: ClipRRect(
+                    //     borderRadius: BorderRadius.circular(12.0),
+                    //     child: Stack(children: [
+                    //       Image.asset(
+                    //         "assets/images/artwork3.png",
+                    //         fit: BoxFit.contain,
+                    //       ),
+                    //       Align(
+                    //         alignment: Alignment.bottomLeft,
+                    //         child: Padding(
+                    //           padding: const EdgeInsets.all(10.0),
+                    //           child: Text(
+                    //             "applianceLabel!",
+                    //             style: const TextStyle(
+                    //               color: TheColors.brown,
+                    //               fontWeight: FontWeight.bold,
+                    //             ),
+                    //           ),
+                    //         ),
+                    //       )
+                    //     ]),
+                    //   ),
+                    // ),
+                    // AppilanceContainer(
+                    //   applianceLabel: "Air Conditioning",
+                    //   bgImage: "assets/images/artwork3.png",
+                    //   width: 200,
+                    // ),
                     const SizedBox(
                       height: 20,
                     ),

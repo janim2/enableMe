@@ -41,6 +41,8 @@ class _LoginState extends State<SignupPage> {
 
   @override
   Widget build(BuildContext context) {
+    final router = GoRouter.of(context);
+
     return Scaffold(
       body: Stack(
         children: [
@@ -126,7 +128,7 @@ class _LoginState extends State<SignupPage> {
                         labelText: "Sign Up",
                         icon: Icons.arrow_forward,
                         ontap: () {
-                          signIn();
+                          if (router.canPop()) router.pop();
                         },
                       )),
                 ],
@@ -134,15 +136,14 @@ class _LoginState extends State<SignupPage> {
             ),
           ),
 
-          InkWell(
-            onTap: () {
-              final router = GoRouter.of(context);
-              if (router.canPop()) router.pop();
-            },
-            child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.all(17.0),
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.all(17.0),
+                child: GestureDetector(
+                  onTap: () {
+                    if (router.canPop()) router.pop();
+                  },
                   child: RichText(
                     text: const TextSpan(
                       text: 'Already have an account?',
@@ -162,8 +163,8 @@ class _LoginState extends State<SignupPage> {
                       ],
                     ),
                   ),
-                )),
-          ),
+                ),
+              )),
         ],
       ),
     );

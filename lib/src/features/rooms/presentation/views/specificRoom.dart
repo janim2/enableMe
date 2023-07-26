@@ -47,7 +47,7 @@ class _SpecificRoomsPageState extends State<SpecificRoomsPage> {
               child: Row(
                 children: [
                   RoomsContainer(
-                    action: () {
+                    onSelected: () {
                       if (router.canPop()) router.pop();
                     },
                     label: "All",

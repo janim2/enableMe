@@ -116,14 +116,14 @@ class _LoginState extends State<LoginPage> {
                   const SizedBox(
                     height: 20,
                   ),
-                  // MyButton(
-                  //   width: 200,
-                  //   labelText: "Login",
-                  //   icon: Icons.arrow_forward,
-                  //   ontap: () {
-                  //     print("kk");
-                  //   },
-                  // ),
+                  MyButton(
+                    width: 20,
+                    labelText: "Login",
+                    icon: Icons.arrow_forward,
+                    ontap: () {
+                      context.push("/dashboard");
+                    },
+                  ),
                 ],
               ),
             ),
