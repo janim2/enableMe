@@ -538,9 +538,11 @@ class _DashBoardPageState extends State<DashBoardPage> {
         children: [
           _pages[_currentIndex],
 
-          const MyAppBar(
-            appLabel: "Dashboard",
-            icon: Icons.home,
+          const SafeArea(
+            child: MyAppBar(
+              appLabel: "Dashboard",
+              icon: Icons.home,
+            ),
           ),
           MyNavBar() // Content of the currently selected page
         ],
@@ -563,7 +565,7 @@ class PlaceholderWidget extends StatelessWidget {
         Container(
           color: color,
           child: Container(
-            margin: const EdgeInsets.only(left: 17, right: 17, top: 80),
+            margin: const EdgeInsets.only(left: 17, right: 17, top: 100),
             padding: const EdgeInsets.all(9),
             decoration: BoxDecoration(
               color: TheColors.lightBrown,
@@ -724,20 +726,19 @@ class PlaceholderWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     AppilanceContainer(
-        //       applianceLabel: "Air Purifier",
-        //       bgImage: "assets/images/artwork4.png",
-        //     ),
-        //     AppilanceContainer(
-        //       applianceLabel: "Wi-Fi Router",
-        //       bgImage: "assets/images/artwork5.png",
-        //     )
-        //   ],
-        // ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            AppilanceContainer(
+              applianceLabel: "Air Purifier",
+              bgImage: "assets/images/artwork4.png",
+            ),
+            AppilanceContainer(
+              applianceLabel: "Wi-Fi Router",
+              bgImage: "assets/images/artwork5.png",
+            )
+          ],
+        ),
       ],
     );
   }

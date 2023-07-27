@@ -1,7 +1,6 @@
 import 'package:enableme/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../src/features/auth/presentation/views/login.dart';
 import '../../src/features/router.dart';
 
 class App extends StatelessWidget {
@@ -13,6 +12,7 @@ class App extends StatelessWidget {
       routeInformationParser: router.routeInformationParser,
       routeInformationProvider: router.routeInformationProvider,
       routerDelegate: router.routerDelegate,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
           useMaterial3: true,
           visualDensity: VisualDensity.adaptivePlatformDensity,
