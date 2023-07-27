@@ -16,20 +16,41 @@ class RoomsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: const EdgeInsets.only(left: 13, top: 17),
-        padding: const EdgeInsets.all(9),
-        decoration: BoxDecoration(
+    return GestureDetector(
+      onTap: onSelected,
+      child: ClipRRect(
+          borderRadius: BorderRadius.circular(50.0),
+          child: Container(
+            margin: const EdgeInsets.all(5),
             color: isSelected == true ? TheColors.lightBrown : TheColors.gray,
-            borderRadius: const BorderRadius.all(
-              Radius.circular(50.0),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Text(
+                label!,
+                style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: "RokkitRegular",
+                    color: isSelected == true ? TheColors.brown : Colors.black),
+              ),
             ),
-            border: Border.all(color: TheColors.gray)),
-        child: Text(
-          label!,
-          style: TextStyle(
-              fontSize: 18,
-              color: isSelected == true ? TheColors.brown : Colors.black),
-        ));
+          )),
+    );
+
+    // Container(
+    //     margin: const EdgeInsets.only(left: 13, top: 17),
+    //     padding: const EdgeInsets.all(9),
+    //     decoration: BoxDecoration(
+    //         color: isSelected == true ? TheColors.lightBrown : TheColors.gray,
+    //         borderRadius: const BorderRadius.all(
+    //           Radius.circular(50.0),
+    //         ),
+    //         border: Border.all(color: TheColors.gray)),
+    //     child: Text(
+    //       label!,
+    //       style: TextStyle(
+    //           fontSize: 18,
+    //           fontFamily: "RokkitRegular",
+    //           color: isSelected == true ? TheColors.brown : Colors.black),
+    //     ));
   }
 }

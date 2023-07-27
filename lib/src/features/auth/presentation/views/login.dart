@@ -67,18 +67,16 @@ class _LoginState extends State<LoginPage> {
                   Text(
                     'Login',
                     style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 1.2,
-                          color: TheColors.white,
-                          height: 1.5,
-                        ),
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 1.2,
+                        color: TheColors.white,
+                        height: 1.5,
+                        fontFamily: "RokkitRegular"),
                   ),
                   Text(
                     'Please sign in to continue',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyLarge
-                        ?.copyWith(color: TheColors.white),
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        color: TheColors.white, fontFamily: "RokkitRegular"),
                   ),
                   const SizedBox(height: 20),
                   AuthField(
@@ -107,10 +105,8 @@ class _LoginState extends State<LoginPage> {
                     child: Text(
                       'Forgot Password',
                       textAlign: TextAlign.end,
-                      style: Theme.of(context)
-                          .textTheme
-                          .bodyLarge
-                          ?.copyWith(color: TheColors.white),
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: TheColors.white, fontFamily: "RokkitRegular"),
                     ),
                   ),
                   const SizedBox(
@@ -121,7 +117,7 @@ class _LoginState extends State<LoginPage> {
                     labelText: "Login",
                     icon: Icons.arrow_forward,
                     ontap: () {
-                      context.push("/dashboard");
+                      context.push("/welcome");
                     },
                   ),
                 ],
@@ -143,12 +139,14 @@ class _LoginState extends State<LoginPage> {
                       style: TextStyle(
                         color: TheColors.white,
                         fontSize: 16,
+                        fontFamily: "RokkitRegular",
                         fontWeight: FontWeight.bold,
                       ),
                       children: <TextSpan>[
                         TextSpan(
                           text: ' SIGN UP',
                           style: TextStyle(
+                            fontFamily: "RokkitRegular",
                             color: TheColors.internationalOrange,
                             // decoration: TextDecoration.underline,
                           ),

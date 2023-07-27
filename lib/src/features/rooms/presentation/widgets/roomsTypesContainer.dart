@@ -57,14 +57,17 @@ class RoomsTypesContainer extends StatelessWidget {
                       text: roomLabel,
                       style: const TextStyle(
                         color: TheColors.brown,
-                        fontSize: 15,
+                        fontFamily: "RokkitRegular",
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                       ),
                       children: <TextSpan>[
                         TextSpan(
                           text: '\n$devicesNumber devices',
                           style: const TextStyle(
-                              color: TheColors.brown, fontSize: 13
+                              fontFamily: "RokkitRegular",
+                              color: TheColors.brown,
+                              fontSize: 15
                               // decoration: TextDecoration.underline,
                               ),
                         ),

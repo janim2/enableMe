@@ -6,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/utils/colors.dart';
 import '../../../dashboard/widgets/circleWithImageInside.dart';
 import '../widgets/circularStructureWithPlusInside.dart';
-import '../widgets/roomsTypesContainer.dart';
 
 class SpecificRoomsPage extends StatefulWidget {
   const SpecificRoomsPage({super.key, this.roomType});
@@ -24,6 +23,20 @@ class _SpecificRoomsPageState extends State<SpecificRoomsPage> {
   void didChangeDependencies() {
     size = MediaQuery.of(context).size;
     super.didChangeDependencies();
+  }
+
+  bigText(String? text) {
+    return Text(
+      text!,
+      style: const TextStyle(fontFamily: "RokkitRegular", fontSize: 20),
+    );
+  }
+
+  smallText(String? text) {
+    return Text(
+      text!,
+      style: const TextStyle(fontFamily: "RokkitRegular", fontSize: 17),
+    );
   }
 
   @override
@@ -97,9 +110,13 @@ class _SpecificRoomsPageState extends State<SpecificRoomsPage> {
                             child: circularStructureWithPlusInside(
                                 theColor: TheColors.gray,
                                 widget: Column(
-                                  children: const [
-                                    Text("Air conditioning"),
-                                    Text("Cooling 23")
+                                  children: [
+                                    bigText(
+                                      "Air conditioning",
+                                    ),
+                                    smallText(
+                                      "Cooling 23",
+                                    )
                                   ],
                                 )),
                           ),
@@ -111,9 +128,9 @@ class _SpecificRoomsPageState extends State<SpecificRoomsPage> {
                                 },
                                 theColor: TheColors.gray,
                                 widget: Column(
-                                  children: const [
-                                    Text("Television"),
-                                    Text("Channel 23")
+                                  children: [
+                                    bigText("Television"),
+                                    smallText("Channel 23")
                                   ],
                                 )),
                           ),
@@ -133,9 +150,9 @@ class _SpecificRoomsPageState extends State<SpecificRoomsPage> {
                             child: circularStructureWithPlusInside(
                                 theColor: TheColors.gray,
                                 widget: Column(
-                                  children: const [
-                                    Text("Wi-Fi Router"),
-                                    Text("4mb/sec")
+                                  children: [
+                                    bigText("Wi-Fi Router"),
+                                    smallText("4mb/sec")
                                   ],
                                 )),
                           ),
@@ -144,9 +161,9 @@ class _SpecificRoomsPageState extends State<SpecificRoomsPage> {
                             child: circularStructureWithPlusInside(
                                 theColor: TheColors.gray,
                                 widget: Column(
-                                  children: const [
-                                    Text("Air Purifier"),
-                                    Text("On")
+                                  children: [
+                                    bigText("Air Purifier"),
+                                    smallText("On")
                                   ],
                                 )),
                           )

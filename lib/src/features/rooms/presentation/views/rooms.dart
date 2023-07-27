@@ -25,13 +25,18 @@ class _RoomsPageState extends State<RoomsPage> {
 
   @override
   Widget build(BuildContext context) {
+    final router = GoRouter.of(context);
+
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            const MyAppBar(
+            MyAppBar(
               appLabel: "Rooms",
               icon: Icons.arrow_back,
+              onLeftIconClick: () {
+                if (router.canPop()) router.pop();
+              },
             ),
             Expanded(
               child: ListView(

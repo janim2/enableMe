@@ -31,7 +31,7 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/dashboard',
-      builder: (context, state) => const DashBoardPage(),
+      builder: (context, state) => DashBoardPage(),
     ),
     GoRoute(
       path: '/rooms',

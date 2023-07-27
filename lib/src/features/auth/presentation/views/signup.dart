@@ -68,11 +68,11 @@ class _LoginState extends State<SignupPage> {
                   Text(
                     'Create Account',
                     style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 1.2,
-                          color: TheColors.white,
-                          height: 1.5,
-                        ),
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 1.2,
+                        color: TheColors.white,
+                        height: 1.5,
+                        fontFamily: "RokkitRegular"),
                   ),
                   const SizedBox(height: 20),
                   AuthField(
@@ -148,6 +148,7 @@ class _LoginState extends State<SignupPage> {
                     text: const TextSpan(
                       text: 'Already have an account?',
                       style: TextStyle(
+                        fontFamily: "RokkitRegular",
                         color: TheColors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -156,6 +157,7 @@ class _LoginState extends State<SignupPage> {
                         TextSpan(
                           text: ' SIGN IN',
                           style: TextStyle(
+                            fontFamily: "RokkitRegular",
                             color: TheColors.internationalOrange,
                             // decoration: TextDecoration.underline,
                           ),

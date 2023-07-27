@@ -42,7 +42,10 @@ class AppilanceContainer extends StatelessWidget {
               child: Text(
                 applianceLabel!,
                 style: const TextStyle(
-                    color: TheColors.brown, fontWeight: FontWeight.bold),
+                    fontFamily: "RokkitRegular",
+                    fontSize: 17,
+                    color: TheColors.brown,
+                    fontWeight: FontWeight.bold),
               ),
             ),
           )

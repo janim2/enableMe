@@ -50,6 +50,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  curved_navigation_bar:
+    dependency: "direct main"
+    description:
+      name: curved_navigation_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   equatable:
     dependency: "direct main"
     description:
@@ -76,13 +83,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "8.1.3"
-  flutter_gamepad:
-    dependency: "direct main"
-    description:
-      name: flutter_gamepad
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.0"
   flutter_lints:
     dependency: "direct dev"
     description:

@@ -1,5 +1,6 @@
 import 'package:enableme/core/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MyNavBar extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
@@ -92,6 +93,9 @@ class MyNavBar extends StatelessWidget {
                   ),
                 ),
                 GestureDetector(
+                  onTap: () {
+                    context.push("/");
+                  },
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Container(
@@ -99,8 +103,8 @@ class MyNavBar extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Icon(
-                          Icons.abc,
-                          color: TheColors.white,
+                          Icons.logout_outlined,
+                          color: TheColors.internationalOrange,
                         ),
                       ),
                     ),

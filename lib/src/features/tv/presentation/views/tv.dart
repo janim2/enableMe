@@ -152,7 +152,8 @@ class _TvPageState extends State<TvPage> {
                                     Text(
                                       'VOL',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: "RokkitRegular"),
                                     ),
                                     Icon(Icons.arrow_drop_down),
                                   ],
@@ -174,7 +175,8 @@ class _TvPageState extends State<TvPage> {
                                     Text(
                                       'CH',
                                       style: TextStyle(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: "RokkitRegular"),
                                     ),
                                     Icon(Icons.arrow_drop_down),
                                   ],

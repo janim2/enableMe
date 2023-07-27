@@ -33,7 +33,9 @@ class AuthField extends StatelessWidget {
             filled: true,
             prefixIcon: icon,
             hintStyle: const TextStyle(
-                color: Colors.white, fontWeight: FontWeight.normal),
+                color: Colors.white,
+                fontWeight: FontWeight.normal,
+                fontFamily: "RokkitRegular"),
             fillColor: TheColors
                 .brown, // Adjust the text field background color if needed
           ),

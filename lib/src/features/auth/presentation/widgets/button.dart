@@ -36,7 +36,10 @@ class MyButton extends StatelessWidget {
             // const SizedBox(width: 10.0),
             Text(
               labelText!,
-              style: const TextStyle(color: TheColors.white),
+              style: const TextStyle(
+                  color: TheColors.white,
+                  fontSize: 20,
+                  fontFamily: "RokkitRegular"),
             ),
             const SizedBox(
               width: 10.0,

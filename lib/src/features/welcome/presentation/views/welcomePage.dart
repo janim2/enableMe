@@ -51,21 +51,24 @@ class _WelcomePageState extends State<WelcomePage> {
                       text: 'Empower',
                       style: TextStyle(
                         color: TheColors.white,
-                        fontSize: 18,
+                        fontSize: 20,
+                        fontFamily: "RokkitRegular",
                         fontWeight: FontWeight.bold,
                       ),
                       children: <TextSpan>[
                         TextSpan(
                           text: ' Your',
                           style: TextStyle(
+                              fontFamily: "RokkitRegular",
                               color: TheColors.white,
                               fontWeight: FontWeight.normal),
                         ),
                         TextSpan(
                           text: ' Abilities,',
                           style: TextStyle(
+                            fontFamily: "RokkitRegular",
                             color: TheColors.white,
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -77,13 +80,14 @@ class _WelcomePageState extends State<WelcomePage> {
                       text: 'Embrace',
                       style: TextStyle(
                         color: TheColors.white,
-                        fontSize: 18,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                       children: <TextSpan>[
                         TextSpan(
                           text: ' Your',
                           style: TextStyle(
+                              fontFamily: "RokkitRegular",
                               color: TheColors.white,
                               fontWeight: FontWeight.normal),
                         ),
@@ -91,7 +95,8 @@ class _WelcomePageState extends State<WelcomePage> {
                           text: ' Dreams.',
                           style: TextStyle(
                             color: TheColors.white,
-                            fontSize: 18,
+                            fontFamily: "RokkitRegular",
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -106,7 +111,8 @@ class _WelcomePageState extends State<WelcomePage> {
                     style: TextStyle(
                         fontSize: 50,
                         color: TheColors.white,
-                        fontWeight: FontWeight.normal),
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "RokkitRegular"),
                   ),
                   const SizedBox(
                     height: 100,

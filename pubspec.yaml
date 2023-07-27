@@ -18,9 +18,10 @@ dependencies:
   http: ^0.13.5
   equatable: ^2.0.5
   go_router: ^6.5.2
-  flutter_gamepad: ^0.1.0
+  # flutter_gamepad: ^0.1.0
   flutter_switch: ^0.3.2
   # control_pad_plus: ^0.0.1
+  curved_navigation_bar: ^1.0.3
 
 
 dev_dependencies:
@@ -37,3 +38,16 @@ flutter:
   assets:
     - assets/images/
   #   - images/a_dot_ham.jpeg
+  fonts:
+    - family: RokkitRegular
+      fonts:
+        - asset: assets/fonts/RokkittRegular400.ttf
+    # - family: Gotham
+    #   fonts:
+    #     - asset: fonts/GOTHAMBOOK.ttf
+    # - family: Quicksand_bold
+    #   fonts:
+    #     - asset: fonts/quicksand_bold.ttf
+    # - family: Quicksand_regular
+    #   fonts:
+    #     - asset: fonts/quicksand_regular.ttf

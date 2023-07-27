@@ -29,16 +29,19 @@ class MyAppBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             GestureDetector(
-              onTap: onLeftIconClick,
+                onTap: onLeftIconClick,
                 child: CircleWithImageInside(
-              icon: icon!,
-            )),
+                  icon: icon!,
+                )),
             GestureDetector(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(50.0),
                 child: Text(
                   appLabel!,
-                  style: const TextStyle(fontSize: 23),
+                  style: const TextStyle(
+                    fontSize: 27,
+                    fontFamily: "RokkitRegular",
+                  ),
                 ),
               ),
             ),
